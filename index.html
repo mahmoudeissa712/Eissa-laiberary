@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة عيسى الشاملة - كتب وأبحاث ومراجع</title>
+    <link rel="stylesheet" href="laiberary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>Eissa Laiberary</span>
+            </a>
+            <div class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">الرئيسية</a>
+                <a href="#library">المكتبة الرقمية</a>
+                <a href="#donate">تبرع أو أضف كتاباً</a>
+                <a href="#about">عن المكتبة</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>عالم من الكتب والأبحاث العلمية بين يديك</h1>
+            <p>ابحث عن آلاف المراجع العلمية والكتب الرائعة، أو شارك معرفتك مع الآخرين.</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="ابحث باسم الكتاب، اسم المؤلف، أو موضوع البحث...">
+                <button onclick="searchBooks()"><i class="fa-solid fa-magnifying-glass"></i> بحث</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="library">
+        <h2 class="section-title">المحتوى الأكاديمي والكتب</h2>
+        
+        <div class="filter-tags">
+            <button class="tag-btn active" onclick="filterCategory('all', event)">الكل (20)</button>
+            <button class="tag-btn" onclick="filterCategory('book', event)">كتب عامة</button>
+            <button class="tag-btn" onclick="filterCategory('research', event)">أبحاث ومراجع</button>
+            <button class="tag-btn" onclick="filterCategory('sale', event)">معروض للبيع</button>
+            <button class="tag-btn" onclick="filterCategory('donate', event)">تبرع ورقي</button>
+        </div>
+
+        <div class="books-grid" id="booksGrid">
+            
+            <div class="book-card" data-category="research">
+                <div class="book-img">
+                    <i class="fa-solid fa-brain"></i>
+                    <span class="book-badge badge-research">بحث علمي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">تطبيقات الذكاء الاصطناعي في الطب</h3>
+                    <p class="book-author">د. أحمد محمود</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="book">
+                <div class="book-img">
+                    <i class="fa-solid fa-atom"></i>
+                    <span class="book-badge badge-book">كتاب</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">مقدمة في الفيزياء الحديثة</h3>
+                    <p class="book-author">أ.د. سامي العلي</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="book-card" data-category="sale">
+                <div class="book-img">
+                    <i class="fa-solid fa-flask"></i>
+                    <span class="book-badge badge-sale">للبيع</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">أساسيات الكيمياء العضوية</h3>
+                    <p class="book-author">البائع: خليل إبراهيم</p>
+                    <div class="book-footer">
+                        <span class="book-price" style="color: var(--accent-color);">200 جنيه</span>
+                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-card" data-category="research">
+                <div class="book-img">
+                    <i class="fa-solid fa-building"></i>
+                    <span class="book-badge badge-research">مرجع علمي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">مرجع الهندسة المدنية الشامل</h3>
+                    <p class="book-author">م. طارق سعيد</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="book-card" data-category="donate">
+                <div class="book-img">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span class="book-badge badge-donate">تبرع ورقي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">التفاضل والتكامل المتقدم</h3>
+                    <p class="book-author">المتبرع: د. فاطمة الزهراء</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (ورقي)</span>
+                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-card" data-category="book">
+                <div class="book-img">
+                    <i class="fa-solid fa-code"></i>
+                    <span class="book-badge badge-book">كتاب</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">تعلم البرمجة بلغة بيلون و JavaScript</h3>
+                    <p class="book-author">م. حسن نور الدين</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="book-card" data-category="research">
+                <div class="book-img">
+                    <i class="fa-solid fa-dna"></i>
+                    <span class="book-badge badge-research">بحث علمي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">الهندسة الوراثية وتطبيقاتها الزراعية</h3>
+                    <p class="book-author">د. سارة المنصوري</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-card" data-category="sale">
+                <div class="book-img">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span class="book-badge badge-sale">للبيع</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">موسوعة القانون المدني المقارن</h3>
+                    <p class="book-author">البائع: أ. مستشار إسلام</p>
+                    <div class="book-footer">
+                        <span class="book-price" style="color: var(--accent-color);">400 جنيه</span>
+                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="book-card" data-category="book">
+                <div class="book-img">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="book-badge badge-book">كتاب</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">مبادئ إدارة الأعمال الحديثة</h3>
+                    <p class="book-author">د. عمر الخالد</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-card" data-category="donate">
+                <div class="book-img">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="book-badge badge-donate">تبرع ورقي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">تاريخ العالم الحديث والمعاصر</h3>
+                    <p class="book-author">المتبرع: محمود الفقي</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (ورقي)</span>
+                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-card" data-category="research">
+                <div class="book-img">
+                    <i class="fa-solid fa-solar-panel"></i>
+                    <span class="book-badge badge-research">بحث علمي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">الطاقة المتجددة واستدامة البيئة</h3>
+                    <p class="book-author">د. خالد العتيبي</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-card" data-category="book">
+                <div class="book-img">
+                    <i class="fa-solid fa-palette"></i>
+                    <span class="book-badge badge-book">كتاب</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">تاريخ الفنون والعمارة عبر العصور</h3>
+                    <p class="book-author">د. نادية القاضي</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-card" data-category="sale">
+                <div class="book-img">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span class="book-badge badge-sale">للبيع</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">أطلس تشريح جسم الإنسان (ورقي)</h3>
+                    <p class="book-author">البائع: د. كريم عبد الله</p>
+                    <div class="book-footer">
+                        <span class="book-price" style="color: var(--accent-color);">670 جنيه</span>
+                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-card" data-category="research">
+                <div class="book-img">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <span class="book-badge badge-research">مرجع علمي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">أمن المعلومات والشبكات اللاسلكية</h3>
+                    <p class="book-author">م. إبراهيم الجمال</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-card" data-category="donate">
+                <div class="book-img">
+                    <i class="fa-solid fa-coins"></i>
+                    <span class="book-badge badge-donate">تبرع ورقي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">الاقتصاد الكلي والسياسات النقدية</h3>
+                    <p class="book-author">المتبرع: أ.د. ياسر الشريف</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (ورقي)</span>
+                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-card" data-category="book">
+                <div class="book-img">
+                    <i class="fa-solid fa-language"></i>
+                    <span class="book-badge badge-book">كتاب</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">قواعد اللغة الإنجليزية الأكاديمية</h3>
+                    <p class="book-author">أ. مريم يوسف</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-card" data-category="research">
+                <div class="book-img">
+                    <i class="fa-solid fa-seedling"></i>
+                    <span class="book-badge badge-research">بحث علمي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">التغير المناخي وأثره على الأمن الغذائي</h3>
+                    <p class="book-author">د. هدى عبد الرحمن</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-card" data-category="sale">
+                <div class="book-img">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span class="book-badge badge-sale">للبيع</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">مرجع الخوارزميات وهياكل البيانات</h3>
+                    <p class="book-author">البائع: م. علي سالم</p>
+                    <div class="book-footer">
+                        <span class="book-price" style="color: var(--accent-color);">230 جنيه</span>
+                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="book-card" data-category="book">
+                <div class="book-img">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <span class="book-badge badge-book">كتاب</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">علم النفس العام وتطوير الذات</h3>
+                    <p class="book-author">د. مصطفى الشافعي</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (PDF)</span>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="book-card" data-category="donate">
+                <div class="book-img">
+                    <i class="fa-solid fa-gears"></i>
+                    <span class="book-badge badge-donate">تبرع ورقي</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">مبادئ الهندسة الميكانيكية</h3>
+                    <p class="book-author">المتبرع: م. أحمد توفيق</p>
+                    <div class="book-footer">
+                        <span class="book-price">مجاني (ورقي)</span>
+                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="background-color: #eef2f5;" id="donate">
+        <div class="container">
+            <h2 class="section-title">التبرع أو إضافة كتاب للبيع</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">
+                هل لديك كتاب ورقي تريد التبرع به أو بيعه بسعر رمزي؟ أو لديك ملف رقمي تريد مشاركته؟ أضفه هنا!
+            </p>
+
+            <div class="add-book-section">
+                <form id="addBookForm">
+                    <div class="form-group">
+                        <label for="title">عنوان الكتاب أو البحث</label>
+                        <input type="text" id="title" class="form-control" placeholder="أدخل العنوان الكامل" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="author">اسم الكاتب / المؤلف</label>
+                            <input type="text" id="author" class="form-control" placeholder="اسم الكاتب" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">نوع المشاركة</label>
+                            <select id="type" class="form-control" onchange="togglePriceField(this.value)">
+                                <option value="book">كتاب PDF (مجاني)</option>
+                                <option value="research">بحث علمي (مجاني)</option>
+                                <option value="donate">تبرع بكتاب ورقي (مجاني)</option>
+                                <option value="sale">بيع كتاب ورقي</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="priceGroup" style="display: none;">
+                        <label for="price">السعر المطلوب (بالعملة المحلية)</label>
+                        <input type="number" id="price" class="form-control" placeholder="مثال: 50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">وسيلة التواصل (رقم الهاتف أو الإيميل)</label>
+                        <input type="text" id="contact" class="form-control" placeholder="لكي يتواصل معك المشتري أو المستفيد" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">رفع ملف (في حالة الكتاب الرقمي أو الصورة)</label>
+                        <input type="file" id="file" class="form-control">
+                    </div>
+
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-plus"></i> نشر الآن في المكتبة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>عن المكتبة</h3>
+                    <p>منصة مفتوحة تهدف إلى نشر العلم والمعرفة من خلال تسهيل الوصول للأبحاث والكتب، وتشجيع تبادل الكتب بين الطلاب والباحثين.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#library">الأبحاث العلمية</a></li>
+                        <li><a href="#donate">إضافة كتاب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fa-solid fa-envelope"></i> info@library.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 10 1651 4801</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                جميع الحقوق محفوظة &copy; 2026 مكتبة عيسى الشاملة.
+            </div>
+        </div>
+    </footer>
+
+    <script src="laiberary.js">
+    </script>
+</body>
+</html>
