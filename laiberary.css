@@ -39,7 +39,6 @@
             padding: 0 15px;
         }
        
-        /* --- الهيدر والقائمة --- */
         header {
             background-color: var(--card-bg);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -89,7 +88,6 @@
             color: var(--primary-color);
         }
 
-        /* --- الهيرو (القسم الرئيسي) --- */
         .hero {
             background: linear-gradient(135deg, var(--primary-color), #112233);
             color: white;
@@ -142,7 +140,6 @@
             background-color: #139661;
         }
 
-        /* --- الأقسام الكبيرة --- */
         section {
             padding: 50px 0;
         }
@@ -164,7 +161,6 @@
             margin: 10px auto 0;
         }
 
-        /* --- شريط الفلترة --- */
         .filter-tags {
             display: flex;
             justify-content: center;
@@ -188,7 +184,6 @@
             border-color: var(--primary-color);
         }
 
-        /* --- شبكة الكتب والمراجع --- */
         .books-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -232,10 +227,18 @@
             font-weight: bold;
         }
 
-        .badge-research { background-color: #8e44ad; }
-        .badge-book { background-color: var(--secondary-color); }
-        .badge-sale { background-color: var(--accent-color); }
-        .badge-donate { background-color: #2980b9; }
+        .badge-research {
+             background-color: #8e44ad; 
+            }
+        .badge-book { 
+            background-color: var(--secondary-color); 
+        }
+        .badge-sale {
+             background-color: var(--accent-color); 
+            }
+        .badge-donate {
+             background-color: #2980b9; 
+            }
 
         .book-info {
             padding: 15px;
@@ -284,7 +287,6 @@
             background-color: #2c5282;
         }
 
-        /* --- نموذج التبرع/البيع --- */
         .add-book-section {
             background-color: var(--card-bg);
             border-radius: 12px;
@@ -343,7 +345,6 @@
             background-color: #139661;
         }
 
-        /* --- الفوتر (تذييل الصفحة) --- */
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -372,7 +373,6 @@
             opacity: 0.8;
         }
 
-        /* --- التجاوب مع مختلف الشاشات (Responsive) --- */
         @media (max-width: 768px) {
             .menu-btn {
                 display: block;

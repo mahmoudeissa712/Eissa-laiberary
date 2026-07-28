@@ -5,7 +5,6 @@
             navLinks.classList.toggle('active');
         });
 
-        // إظهار وإخفاء حقل السعر بناءً على الخيار
         function togglePriceField(value) {
             const priceGroup = document.getElementById('priceGroup');
             if (value === 'sale') {
@@ -15,12 +14,10 @@
             }
         }
 
-        // فلترة الكتب حسب التصنيف
         function filterCategory(category, e) {
             const buttons = document.querySelectorAll('.tag-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
-            // إضافة التفعيل للزر المختار
             e.target.classList.add('active');
 
             const cards = document.querySelectorAll('.book-card');
@@ -33,7 +30,6 @@
             });
         }
 
-        // وظيفة البحث اللحظي
         function searchBooks() {
             const input = document.getElementById('searchInput').value.toLowerCase();
             const cards = document.querySelectorAll('.book-card');
@@ -50,7 +46,6 @@
             });
         }
 
-        // إضافة كتاب جديد ديناميكياً
         document.getElementById('addBookForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -80,7 +75,6 @@
                 iconClass = "fa-hand-holding-heart";
             }
 
-            // إنشاء العناصر الجديدة
             const newCard = document.createElement('div');
             newCard.className = 'book-card';
             newCard.setAttribute('data-category', type);
@@ -99,7 +93,6 @@
                 </div>
             `;
 
-            // إضافة في مقدمة الكتب
             document.getElementById('booksGrid').prepend(newCard);
 
             alert('تم نشر الكتاب/البحث بنجاح ومضاف للشبكة الآن!');
