@@ -1,478 +1,387 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكتبة عيسى الشاملة - كتب وأبحاث ومراجع</title>
-    <link rel="stylesheet" href="laiberary.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    
+    <title>M E Hospital</title>
+    <link rel="stylesheet" href="hospital.css">
 </head>
 <body>
+    <header id="home">
+     <div class="navbar">
+        <nav>
+      <a class="logo" href="./hospital.html"><img src="logo & icon/logo hospital'.png" alt="logo hospital" >
+      <h1>M E Hospital</h1> </a>
+      
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
 
-    <header>
-        <div class="container navbar">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-book-open-reader"></i>
-                <span>Eissa Laiberary</span>
-            </a>
-            <div class="menu-btn" id="menuBtn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <nav class="nav-links" id="navLinks">
-                <a href="#home">الرئيسية</a>
-                <a href="#library">المكتبة الرقمية</a>
-                <a href="#donate">تبرع أو أضف كتاباً</a>
-                <a href="#about">عن المكتبة</a>
-            </nav>
+        </ul>
+      </nav>
+     </div>
+     <div class="home-content">
+        <div class="col">
+            <small>We Give You The Best!</small>
+            <h1>We Provide <span class="text-primary">Medical </span>Service That You Can <span class="text-primary">Trust!</span></h1>
+            <p>Need Professional Help ? Our Answer Your Questions. Visit Us Now Or Make an Appointment !</p>
+            <a href="#" class="btn btn-primary">Get Contact</a>
+            <a href="#contact" class="btn btn-secandery">Contact Now</a>
+
         </div>
+     </div>
     </header>
+    <main>
+        <section id="about">
+            <div class="contaner">
+                <div class="title">
+                    <h2>We Offer Diffrant Services To Improve Your Health.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eum.</p>
+                </div>
+                <div class="row">
+                    <div class="col2">
+                        <h3>Who We Are</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque fuga, doloremque pariatur quod vel ab dolorum. Dolor voluptatum suscipit ipsum molestiae, excepturi fugiat, eius ex nemo, officiis facilis iusto?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quaerat labore voluptates ipsam recusandae eveniet perspiciatis? Minima quam beatae eaque velit a, eligendi suscipit. Quae.</p>
+                        <div class="list">
+                            <ul>
+                                <li><img src="logo & icon/player.png" alt="play icon">Lorem ipsum dolor sit.</li>
+                                <li><img src="logo & icon/player.png" alt="play icon">Lorem ipsum dolor sit.</li>
+                                <li><img src="logo & icon/player.png" alt="play icon">Lorem ipsum dolor sit.</li>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>عالم من الكتب والأبحاث العلمية بين يديك</h1>
-            <p>ابحث عن آلاف المراجع العلمية والكتب الرائعة، أو شارك معرفتك مع الآخرين.</p>
-            <div class="search-box">
-                <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="ابحث باسم الكتاب، اسم المؤلف، أو موضوع البحث...">
-                <button onclick="searchBooks()"><i class="fa-solid fa-magnifying-glass"></i> بحث</button>
-            </div>
-        </div>
-    </section>
+                            </ul>
+                            <ul>
+                                <li><img src="logo & icon/player.png" alt="play icon">Lorem ipsum dolor sit.</li>
+                                <li><img src="logo & icon/player.png" alt="play icon">Lorem ipsum dolor sit.</li>
+                                <li><img src="logo & icon/player.png" alt="play icon">Lorem ipsum dolor sit.</li>
 
-    <section class="container" id="library">
-        <h2 class="section-title">المحتوى الأكاديمي والكتب</h2>
-        
-        <div class="filter-tags">
-            <button class="tag-btn active" onclick="filterCategory('all', event)">الكل (20)</button>
-            <button class="tag-btn" onclick="filterCategory('book', event)">كتب عامة</button>
-            <button class="tag-btn" onclick="filterCategory('research', event)">أبحاث ومراجع</button>
-            <button class="tag-btn" onclick="filterCategory('sale', event)">معروض للبيع</button>
-            <button class="tag-btn" onclick="filterCategory('donate', event)">تبرع ورقي</button>
-        </div>
-
-        <div class="books-grid" id="booksGrid">
-            
-            <div class="book-card" data-category="research">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-brain"></i> -->
-                     <img src="photo/1.jpeg" alt="">
-                    <span class="book-badge badge-research">بحث علمي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">تطبيقات الذكاء الاصطناعي في الطب</h3>
-                    <p class="book-author">د. أحمد محمود</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="book-card" data-category="book">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-atom"></i> -->
-                     <img src="photo/2.jpeg" alt="">
-                    <span class="book-badge badge-book">كتاب</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">مقدمة في الفيزياء الحديثة</h3>
-                    <p class="book-author">أ.د. سامي العلي</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-         
-            <div class="book-card" data-category="sale">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-flask"></i> -->
-                     <img src="photo/3.jpeg" alt="">
-                    <span class="book-badge badge-sale">للبيع</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">أساسيات الكيمياء العضوية</h3>
-                    <p class="book-author">البائع: خليل إبراهيم</p>
-                    <div class="book-footer">
-                        <span class="book-price" style="color: var(--accent-color);">200 جنيه</span>
-                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="book-card" data-category="research">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-building"></i> -->
-                     <img src="photo/4.jpeg" alt="">
-                    <span class="book-badge badge-research">مرجع علمي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">مرجع الهندسة المدنية الشامل</h3>
-                    <p class="book-author">م. طارق سعيد</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-        
-            <div class="book-card" data-category="donate">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-calculator"></i> -->
-                     <img src="photo/5.jpeg" alt="">
-                    <span class="book-badge badge-donate">تبرع ورقي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">التفاضل والتكامل المتقدم</h3>
-                    <p class="book-author">المتبرع: د. فاطمة الزهراء</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (ورقي)</span>
-                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="book-card" data-category="book">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-code"></i> -->
-                     <img src="photo/6.png" alt="">
-                    <span class="book-badge badge-book">كتاب</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">تعلم البرمجة بلغة بيلون و JavaScript</h3>
-                    <p class="book-author">م. حسن نور الدين</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-          
-            <div class="book-card" data-category="research">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-dna"></i> -->
-                     <img src="photo/7.jpeg" alt="">
-                    <span class="book-badge badge-research">بحث علمي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">الهندسة الوراثية وتطبيقاتها الزراعية</h3>
-                    <p class="book-author">د. سارة المنصوري</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="book-card" data-category="sale">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-scale-balanced"></i> -->
-                     <img src="photo/8.jpeg" alt="">
-                    <span class="book-badge badge-sale">للبيع</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">موسوعة القانون المدني المقارن</h3>
-                    <p class="book-author">البائع: أ. مستشار إسلام</p>
-                    <div class="book-footer">
-                        <span class="book-price" style="color: var(--accent-color);">400 جنيه</span>
-                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
-                    </div>
-                </div>
-            </div>
-
-          
-            <div class="book-card" data-category="book">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-chart-line"></i> -->
-                     <img src="photo/9.jpeg" alt="">
-                    <span class="book-badge badge-book">كتاب</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">مبادئ إدارة الأعمال الحديثة</h3>
-                    <p class="book-author">د. عمر الخالد</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="book-card" data-category="donate">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-globe"></i> -->
-                     <img src="photo/10.jpeg" alt="">
-                    <span class="book-badge badge-donate">تبرع ورقي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">تاريخ العالم الحديث والمعاصر</h3>
-                    <p class="book-author">المتبرع: محمود الفقي</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (ورقي)</span>
-                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="book-card" data-category="research">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-solar-panel"></i> -->
-                     <img src="photo/11.jpeg" alt="">
-                    <span class="book-badge badge-research">بحث علمي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">الطاقة المتجددة واستدامة البيئة</h3>
-                    <p class="book-author">د. خالد العتيبي</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="book-card" data-category="book">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-palette"></i> -->
-                     <img src="photo/12.jpeg" alt="">
-                    <span class="book-badge badge-book">كتاب</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">تاريخ الفنون والعمارة عبر العصور</h3>
-                    <p class="book-author">د. نادية القاضي</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="book-card" data-category="sale">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-stethoscope"></i> -->
-                     <img src="photo/13.jpeg" alt="">
-                    <span class="book-badge badge-sale">للبيع</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">أطلس تشريح جسم الإنسان (ورقي)</h3>
-                    <p class="book-author">البائع: د. كريم عبد الله</p>
-                    <div class="book-footer">
-                        <span class="book-price" style="color: var(--accent-color);">670 جنيه</span>
-                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="book-card" data-category="research">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-network-wired"></i> -->
-                     <img src="photo/14.jpeg" alt="">
-                    <span class="book-badge badge-research">مرجع علمي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">أمن المعلومات والشبكات اللاسلكية</h3>
-                    <p class="book-author">م. إبراهيم الجمال</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="book-card" data-category="donate">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-coins"></i> -->
-                     <img src="photo/15.jpeg" alt="">
-                    <span class="book-badge badge-donate">تبرع ورقي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">الاقتصاد الكلي والسياسات النقدية</h3>
-                    <p class="book-author">المتبرع: أ.د. ياسر الشريف</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (ورقي)</span>
-                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="book-card" data-category="book">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-language"></i> -->
-                     <img src="photo/16.jpeg" alt="">
-                    <span class="book-badge badge-book">كتاب</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">قواعد اللغة الإنجليزية الأكاديمية</h3>
-                    <p class="book-author">أ. مريم يوسف</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="book-card" data-category="research">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-seedling"></i> -->
-                     <img src="photo/17.jpeg" alt="">
-                    <span class="book-badge badge-research">بحث علمي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">التغير المناخي وأثره على الأمن الغذائي</h3>
-                    <p class="book-author">د. هدى عبد الرحمن</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="book-card" data-category="sale">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-laptop-code"></i> -->
-                     <img src="photo/18.jpeg" alt="">
-                    <span class="book-badge badge-sale">للبيع</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">مرجع الخوارزميات وهياكل البيانات</h3>
-                    <p class="book-author">البائع: م. علي سالم</p>
-                    <div class="book-footer">
-                        <span class="book-price" style="color: var(--accent-color);">230 جنيه</span>
-                        <a href="#" class="btn-download" style="background-color: var(--accent-color);"><i class="fa-solid fa-envelope"></i> تواصل</a>
-                    </div>
-                </div>
-            </div>
-
-          
-            <div class="book-card" data-category="book">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-heart-pulse"></i> -->
-                     <img src="photo/19.jpeg" alt="">
-                    <span class="book-badge badge-book">كتاب</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">علم النفس العام وتطوير الذات</h3>
-                    <p class="book-author">د. مصطفى الشافعي</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (PDF)</span>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> تحميل</a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="book-card" data-category="donate">
-                <div class="book-img">
-                    <!-- <i class="fa-solid fa-gears"></i> -->
-                     <img src="photo/20.jpeg" alt="">
-                    <span class="book-badge badge-donate">تبرع ورقي</span>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">مبادئ الهندسة الميكانيكية</h3>
-                    <p class="book-author">المتبرع: م. أحمد توفيق</p>
-                    <div class="book-footer">
-                        <span class="book-price">مجاني (ورقي)</span>
-                        <a href="#" class="btn-download" style="background-color: #2980b9;"><i class="fa-solid fa-hand-holding-heart"></i> طلب الكتاب</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section style="background-color: #eef2f5;" id="donate">
-        <div class="container">
-            <h2 class="section-title">التبرع أو إضافة كتاب للبيع</h2>
-            <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">
-                هل لديك كتاب ورقي تريد التبرع به أو بيعه بسعر رمزي؟ أو لديك ملف رقمي تريد مشاركته؟ أضفه هنا!
-            </p>
-
-            <div class="add-book-section">
-                <form id="addBookForm">
-                    <div class="form-group">
-                        <label for="title">عنوان الكتاب أو البحث</label>
-                        <input type="text" id="title" class="form-control" placeholder="أدخل العنوان الكامل" required>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="author">اسم الكاتب / المؤلف</label>
-                            <input type="text" id="author" class="form-control" placeholder="اسم الكاتب" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="type">نوع المشاركة</label>
-                            <select id="type" class="form-control" onchange="togglePriceField(this.value)">
-                                <option value="book">كتاب PDF (مجاني)</option>
-                                <option value="research">بحث علمي (مجاني)</option>
-                                <option value="donate">تبرع بكتاب ورقي (مجاني)</option>
-                                <option value="sale">بيع كتاب ورقي</option>
-                            </select>
+                            </ul>
                         </div>
                     </div>
-
-                    <div class="form-group" id="priceGroup" style="display: none;">
-                        <label for="price">السعر المطلوب (بالعملة المحلية)</label>
-                        <input type="number" id="price" class="form-control" placeholder="مثال: 50">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact">وسيلة التواصل (رقم الهاتف أو الإيميل)</label>
-                        <input type="text" id="contact" class="form-control" placeholder="لكي يتواصل معك المشتري أو المستفيد" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="file">رفع ملف (في حالة الكتاب الرقمي أو الصورة)</label>
-                        <input type="file" id="file" class="form-control">
-                    </div>
-
-                    <button type="submit" class="submit-btn"><i class="fa-solid fa-plus"></i> نشر الآن في المكتبة</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer id="about">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>عن المكتبة</h3>
-                    <p>منصة مفتوحة تهدف إلى نشر العلم والمعرفة من خلال تسهيل الوصول للأبحاث والكتب، وتشجيع تبادل الكتب بين الطلاب والباحثين.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#library">الأبحاث العلمية</a></li>
-                        <li><a href="#donate">إضافة كتاب</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>تواصل معنا</h3>
-                    <p><i class="fa-solid fa-envelope"></i> info@library.com</p>
-                    <p><i class="fa-solid fa-phone"></i> +20 10 1651 4801</p>
+                    <img src="photo/ranin.jpeg" alt="ranin and doctor">
                 </div>
             </div>
-            <div class="footer-bottom">
-                جميع الحقوق محفوظة &copy; 2026 مكتبة عيسى الشاملة.
-            </div>
-        </div>
-    </footer>
 
-    <script src="laiberary.js">
-    </script>
+        </section>
+        <section id="info">
+            <div class="contaner">
+                <div class="row">
+                    <div class="col3">
+                        <div class="icon-box"> 
+                        <img src="logo & icon/home.png" alt="room">
+                        <span>3468</span></div>
+                        <p>Hospital Rooms</p>
+                    </div>
+                    <div class="col3">
+                        <div class="icon-box"> 
+                        <img src="logo & icon/profile.png" alt="doctor">
+                        <span>557</span></div>
+                        <p>Specialist Doctors</p>
+                    </div>
+                    <div class="col3">
+                       <div class="icon-box">
+                         <img src="logo & icon/smile-face.png" alt="happy Patient">
+                        <span>4379</span></div>
+                        <p>Hoappy Patient</p>
+                    </div>
+                    <div class="col3">
+                        <div class="icon-box"> 
+                        <img src="logo & icon/list.png" alt="experience">
+                        <span>32</span></div>
+                        <p>Year Of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="contaner">
+                <div class="title">
+                    <h2>We Are Alwayes Ready To Help You &amp; Your Family</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, quos.</p>
+                </div>
+                <div class="row">
+                    <div class="col4">
+                        <img src="logo & icon/ambulance.png" alt="ambulance car">
+                        <h3>Emergency Help</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, modi?</p>
+
+                    </div>
+                    <div class="col4">
+                        <img src="logo & icon/heart.png" alt="heart broken">
+                        <h3>Enriched Pharmacy</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, modi?</p>
+                        
+                    </div>
+                    <div class="col4">
+                        <img src="logo & icon/sma3a.png" alt="sma3a doctor">
+                        <h3>Medical Tratment</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, modi?</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="call">
+            <div class="call-content">
+                <h2>Do You Need Emergency Medical Care? Call @ 1234 5678</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, delectus. Totam deleniti incidunt sed ducimus.</p>
+                <a href="#" class="btn btn-third">Contact Now</a>
+                <a href="#" class="btn btn-forth">Learn More <img src="logo & icon/right-arrow.png" alt="right-arrow"></a>
+
+            </div>
+        </section >
+        <section id="services">
+            <div class="contaner">
+                <div class="title">
+                    <h2>We Offer Diffrant Services To Improve Your Health.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis, eum provident qui possimus quae.</p>
+                </div>
+                <div class="row">
+                    <div class="col5">
+                        <div class="icon-box">
+                            <img src="logo & icon/big list .png" alt="ambulance car">
+                        <h3>General Treatment</h3></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis, eum provident qui possimus quae.</p>
+
+                    </div>
+                    <div class="col5">
+                        <div class="icon-box">
+                        <img src="logo & icon/clean.png" alt="heart broken">
+                        <h3>Teath Whitening</h3></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis, eum provident qui possimus quae.</p>
+                        
+                    </div>
+                    <div class="col5">
+                        <div class="icon-box">
+                        <img src="logo & icon/heart-rate.png" alt="sma3a doctor">
+                        <h3>Heart Surgery</h3></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis, eum provident qui possimus quae.</p>
+                        
+                    </div>
+                    <div class="col5">
+                        <div class="icon-box">
+                        <img src="logo & icon/ear.png" alt="ambulance car">
+                        <h3>Ear Treatment</h3></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis, eum provident qui possimus quae.</p>
+
+                    </div>
+                    <div class="col5">
+                        <div class="icon-box">
+                        <img src="logo & icon/eies.png" alt="heart broken">
+                        <h3>Vision Problems</h3></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis, eum provident qui possimus quae.</p>
+                        
+                    </div>
+                    <div class="col5">
+                        <div class="icon-box">
+                        <img src="logo & icon/blood.png" alt="sma3a doctor">
+                        <h3>Blood Transfusion</h3></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis, eum provident qui possimus quae.</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="price">
+            <div class="contaner">
+                <div class="title">
+                    <h2>We Provide You The Best Treatment In Resonable Price</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor quia eos sunt, doloremque eligendi doloribus.</p>
+                </div>
+                <div class="row">
+                    <div class="col6">
+                        <img src="logo & icon/cut.png" class="main-img" alt="cut">
+                        <h3>Plastic Surgery</h3>
+                        <p> <span>$199 </span>/ Visit</p>
+                        
+                            <ul>
+                           <li> <p>Lorem ipsum dolor sit.</p>
+                            <img src="logo & icon/true.png" alt="true"></li>
+                            <li><p>Lorem ipsum dolor sit.</p>
+                            <img src="logo & icon/true.png" alt="true"></li>
+                           <li> <p>Lorem ipsum dolor sit.</p>
+                            <img src="logo & icon/true.png" alt="true"></li>
+                           <li> <p>Lorem ipsum dolor sit.</p>
+                            <img src="logo & icon/true.png" alt="true"></li>
+                            <li> <p>Lorem ipsum dolor sit.</p>
+                            <img src="logo & icon/error.png" alt="false"></li>
+                        </ul>
+                        <a href="#" class="btn btn-five">Book Now</a>
+                        
+                    </div>
+                    <div class="col6">
+                        <img src="logo & icon/clean.png" class="main-img" alt="teeth">
+                        <h3>Teath Whitening</h3>
+                        <p> <span>$299 </span>/ Visit</p>
+                        
+                        <ul>
+                            <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                             <li><p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                            <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                            <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/error.png" alt="false"></li>
+                             <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/error.png" alt="false"></li>
+                         </ul>
+                         <a href="#" class="btn btn-five">Book Now</a>
+
+                    </div>
+                    <div class="col6">
+                        <img src="logo & icon/heart.png" class="main-img" alt="heart">
+                        <h3>Heart Surgery</h3>
+                        <p> <span>$399 </span>/ Visit</p>
+                        <ul>
+                            <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                             <li><p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                            <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                            <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                             <li> <p>Lorem ipsum dolor sit.</p>
+                             <img src="logo & icon/true.png" alt="true"></li>
+                         </ul>
+                         <a href="#" class="btn btn-five">Book Now</a>
+
+                    </div>
+               
+            </div>
+        </section>
+        <section id="doctors">
+            <div class="contaner">
+                <div class="title">
+                    <h2>Meet Our Doctors</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis cupiditate quos distinctio.</p>
+
+                </div>
+                <div class="row">
+                    <div class="col7">
+                        <div class="card-img">
+                        <img src="photo/dr 1.jpg" alt=""></div>
+                        <h3>Dr. farha</h3>
+                        <p>Daintest</p>
+                        <a href="#" class="btn btn-sex">More Details</a>
+                        
+                    </div>
+                    <div class="col7">
+                        <div class="card-img">
+                        <img src="photo/dr 2.jpeg" alt=""></div>
+                        <h3>Dr. Ziad</h3>
+                        <p>General Surgery</p>
+                         <a href="#" class="btn btn-sex">More Details</a>
+
+                    </div>
+                    <div class="col7">
+                        <div class="card-img">
+                        <img src="photo/dr 3.jpeg" alt=""></div>
+                        <h3>Dr. Mazen</h3>
+                        <p>Psychiatry</p>
+                         <a href="#" class="btn btn-sex">More Details</a>
+
+                    </div>
+                    <div class="col7">
+                        <div class="card-img">
+                        <img src="photo/dr 4.jpeg" alt=""></div>
+                        <h3>Dr. Ali</h3>
+                        <p>Oncology</p>
+                         <a href="#" class="btn btn-sex">More Details</a>
+
+                    </div>
+                    <div class="col7">
+                        <div class="card-img">
+                        <img src="photo/dr 5.jpeg" alt=""></div>
+                        <h3>Dr. Nada</h3>
+                        <p>Plastic Surgery</p>
+                         <a href="#" class="btn btn-sex">More Details</a>
+
+                    </div>
+                    <div class="col7">
+                        <div class="card-img">
+                        <img src="photo/dr 6.jpeg" alt=""></div>
+                        <h3>Dr. Aisha</h3>
+                        <p>Urology</p>
+                         <a href="#" class="btn btn-sex">More Details</a>
+
+                    </div>
+               
+            </div>
+            </div>
+        </section>
+        <section id="blogs">
+            <div class="contaner">
+                <div class="title">
+                    <h3>Keep Up Our Most Recent Medical News </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea quasi eum.</p>
+                </div>
+                <div class="row">
+                    <div class="col8">
+                        <img src="photo/report.jpeg" alt="">
+                        <a href="">22 Aug, 2023</a>
+                        <h2>We Have Annouced Our New Product</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem odit quas corrupti dolorem cum natus debitis magni numquam, vero fuga aliquid est perspiciatis corporis voluptates vitae nulla laboriosam iure iusto.</p>
+                    </div>
+                    <div class="col8">
+                        <img src="photo/teeth.jpg" alt="">
+                        <a href="">30 Dec, 2023</a>
+                        <h2>Top Fove Ways For Solving Teeth Problems</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem odit quas corrupti dolorem cum natus debitis magni numquam, vero fuga aliquid est perspiciatis corporis voluptates vitae nulla laboriosam iure iusto.</p>
+                    </div>
+                    <div class="col8">
+                        <img src="photo/report 3.jpg" alt="">
+                        <a href="">1 Jan, 2024</a>
+                        <h2>We Provide Highly Business Solutions</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem odit quas corrupti dolorem cum natus debitis magni numquam, vero fuga aliquid est perspiciatis corporis voluptates vitae nulla laboriosam iure iusto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+           <div class="contaner">
+            <div class="title">
+                <h2>We Are Alwayes Ready To Help You. Book An Appointment</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, officiis esse. Ex.</p>
+
+            </div>
+           
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-group">
+                    <h3>Address</h3>
+                    <p><img src="logo & icon/location.png" alt="location">El Estad , Tanta , Egypt</p>
+                    <p><img src="logo & icon/call.jpeg" alt="Phone">Phone 01016514801</p>
+                    <p><img src="logo & icon/email.jpeg" alt="email">Support@m-e-hospital.com</p>
+
+                </div>
+                
+                <div class="social-group">
+                      <h3>Follow Us</h3>
+                      <a href="#"><img src="logo & icon/facebook-svgrepo-com.svg" alt="facebook"></a>
+                      <a href="#"><img src="logo & icon/instagram-svgrepo-com.svg" alt="instagram"></a>
+
+                      <a href="#"><img src="logo & icon/whatsapp-svgrepo-com.svg" alt="twitter"></a>
+
+                </div>
+            </div>
+            <img class="last-img" src="photo/m e hospital.png" alt="">
+            </div>
+           </div>
+        </section>
+        
+    </main>
+    <footer id="footer">
+        <p>Copyright &copy;2026 all right reserved | Made By Mahmoud Eissa</p>
+     </footer>
+    
 </body>
 </html>
